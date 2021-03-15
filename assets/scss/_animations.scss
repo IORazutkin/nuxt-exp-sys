@@ -1,0 +1,49 @@
+$shake-amplitude: 3px;
+
+@keyframes shake {
+  0% {
+    transform: translateX(-$shake-amplitude);
+  }
+  25% {
+    transform: translateX($shake-amplitude);
+  }
+  50% {
+    transform: translateX(-$shake-amplitude);
+  }
+  75% {
+    transform: translateX($shake-amplitude);
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.drop-down-enter-active, .drop-down-leave-active {
+  transition: transform .2s linear;
+}
+
+.drop-down-enter, .drop-down-leave-to {
+  transform: translateY(-200px);
+}
+
+.drop-down-enter-to, .drop-down-leave {
+  transform: translateY(0);
+}
+
+.opacity-enter-active, .opacity-leave-active {
+  transition: opacity .1s linear;
+}
+
+.opacity-enter, .opacity-leave-to {
+  opacity: 0;
+}
+
+.opacity-enter-to, .opacity-leave {
+  opacity: 1;
+}

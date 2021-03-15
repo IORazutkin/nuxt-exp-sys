@@ -1,0 +1,17 @@
+// Media
+//$mq-desktop-full-hd: 1920px;
+//$mq-desktop-medium: 1600px;
+//$mq-desktop-hd: 1366px;
+$mq-desktop-min: 1200px;
+
+//$mq-tablet-max: $mq-desktop-min - 1;
+//$mq-tablet-medium: 1024px;
+$mq-tablet-small: 992px;
+//$mq-tablet-small-max: $mq-tablet-small - 1;
+$mq-tablet-min: 768px;
+
+$mq-mobile-max: $mq-tablet-min - 1;
+$mq-mobile-medium: 576px;
+$mq-mobile-small-max: $mq-mobile-medium - 1;
+$mq-mobile-small: 480px;
+//$mq-mobile-min: 320px;
