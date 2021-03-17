@@ -11,6 +11,9 @@
             <nuxt-link to="/service" class="mr-4">
               Запись пациента
             </nuxt-link>
+            <button class="page__header__btn mr-4" @click="exportDb">
+              Экспорт БД
+            </button>
             <button class="page__header__btn" @click="logout">
               Выход
             </button>
@@ -110,6 +113,14 @@ export default class extends Vue {
     await context.$axios.$get(process.env.API_ENDPOINT + '/api/user').catch(
       () => {
         context.redirect('/login')
+      }
+    )
+  }
+
+  exportDb () {
+    this.$axios.$get('/api/db').then(
+      () => {
+        alert('База данных эксопртирована в формат *.pl')
       }
     )
   }
